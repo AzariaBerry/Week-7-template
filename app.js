@@ -9,9 +9,9 @@ app.use(express.static(__dirname + "/public"));
 
 var connection = mysql.createConnection({
   host     : 'l',
-  user     : '',
-  database : '',
-  password : ''
+  user     : 'root',
+  database : 'users',
+  password : 'myroots1234@'
 });
 
 app.get("/", function(req, res){
@@ -33,6 +33,12 @@ app.post("/register", function(req, res){
         res.redirect("/");
     });
 });
+
+connection.query('select * from people', function (err, results, fields) {
+    if (error) throw error;
+    console.log('The current emails: ', results);
+});
+
 
 app.listen(8080, function(){
     console.log("Server running on 8080!");
