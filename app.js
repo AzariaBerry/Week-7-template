@@ -34,12 +34,6 @@ app.post("/register", function(req, res){
     });
 });
 
-connection.query('select * from people', function (err, results, fields) {
-    if (error) throw error;
-    console.log('The current emails: ', results);
-});
-
-
-app.listen(8080, function(){
-    console.log("Server running on 8080!");
+app.listen(8040, function(){
+    console.log("Server running on 8040!");
 });
