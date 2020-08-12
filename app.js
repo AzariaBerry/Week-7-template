@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 
 var connection = mysql.createConnection({
-  host     : 'l',
+  host     : 'localhost',
   user     : 'root',
   database : 'users',
   password : 'myroots1234@'
@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
 
 app.get("/", function(req, res){
     // Find count of users in DB
-    var q = "SELECT COUNT(*) AS count FROM users";
+    var q = "SELECT COUNT(*) AS count FROM emails";
     connection.query(q, function(err, results){
         if(err) throw err;
         var count = results[0].count; 
@@ -28,7 +28,7 @@ app.post("/register", function(req, res){
     var person = {
         email: req.body.email
     };
-    connection.query('INSERT INTO users SET ?', person, function(err, result) {
+    connection.query('INSERT INTO emails SET ?', person, function(err, result) {
         if (err) throw err;
         res.redirect("/");
     });

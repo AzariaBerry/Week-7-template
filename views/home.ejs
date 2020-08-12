@@ -1,14 +1,22 @@
 <head>
-
+    <link rel="stylesheet" type="text/css" href="morty.css">
 </head>
 
 <body>
     <form method="POST" action='/register'>
-        <label for="email">Email</label>
-        <input type="text" class="form" name="email" placeholder="Enter Your Email">
-        
-    <!--im having trouble getting it to connect to the js so it prints on the page-->
+        <div class="container">
+            <!--the count says how many emails are in the DB-->
+            <p><h1>Join our <%= count %> Ricks and Mortys in the Citadel of Ricks</h1></p>
+            <p>The Citadel’s problem is the Ricks and Mortys feeding on the Citadel’s death. But I’ve got a message for them, from the Ricks and Mortys keeping it alive. A message from the Ricks and Mortys that believe in this Citadel to the Ricks and Mortys that don’t: You’re outnumbered!</p>
+            <p>
+                Anyone opposing me is perilous and purged!
+            </p>
+            <p>This message was brought to you by Evil Morty</p>
+            <!--this is the email box-->
+            <label for="email">Email</label>
+            <input type="text" class="form" name="email" placeholder="Enter Your Email">
     <button>submit</button>
+        </div>
     </form>
 <script src="app.js"></script>
 </body>
