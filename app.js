@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   database : 'users',
-  password : 'myroots1234@'
+  password : ''
 });
 
 app.get("/", function(req, res){
