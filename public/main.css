@@ -1,0 +1,11 @@
+body{
+    background-color: black;
+    background-image: url(evilmorty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.container{
+    text-align: center;
+}
